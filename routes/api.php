@@ -32,6 +32,11 @@ Route::group([
     Route::post('profile', 'AuthController@profile');
     Route::post('destroy/{id}', 'AuthController@destroy');
     Route::post('users', 'AuthController@index');
-    Route::resource('resource','BookController');
+   
 
+});
+Route::group([
+	'middleware'=>'api',
+], function($router){
+	 Route::resource('books','BookController');
 });

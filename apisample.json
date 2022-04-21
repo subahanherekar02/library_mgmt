@@ -99,3 +99,112 @@ payload:{
         }
     ]
 }
+
+
+// ==========================================================================================================================
+// endpoint
+// api/books (GET)
+// sample-response
+{
+    "success": true,
+    "book_details": [
+        {
+            "id": 1,
+            "book_name": "test1",
+            "author": "auth1",
+            "cover_image": "path/123",
+            "created_at": "2022-04-21 16:59:13",
+            "updated_at": "2022-04-21 16:59:13",
+            "deleted_at": null
+        },
+        {
+            "id": 2,
+            "book_name": "test12",
+            "author": "auth1",
+            "cover_image": "path/123",
+            "created_at": "2022-04-21 16:59:27",
+            "updated_at": "2022-04-21 16:59:27",
+            "deleted_at": null
+        },
+        {
+            "id": 3,
+            "book_name": "test123",
+            "author": "auth1",
+            "cover_image": "path/123",
+            "created_at": "2022-04-21 17:02:56",
+            "updated_at": "2022-04-21 17:02:56",
+            "deleted_at": null
+        }
+    ]
+}
+
+//================================================================================================================
+// endpoint
+// api/books (POST)
+// BODY
+{
+    "book_name": "test123",
+    "author": "auth1",
+    "cover_image": "path/123",
+    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY1MDU1MTQ0NywiZXhwIjoxNjUwNTU1MDQ3LCJuYmYiOjE2NTA1NTE0NDcsImp0aSI6InBaT3hPZFdKNGVlVUwwUFEiLCJzdWIiOjQsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.QQC111gzycnT9AGIZGOeNRfJaeLKm32O6dLG2Vn0PZU"
+}
+
+
+// sample json
+{
+    "success": true,
+    "book": {
+        "book_name": "test12",
+        "author": "auth1",
+        "cover_image": "path/123",
+        "updated_at": "2022-04-21 16:59:27",
+        "created_at": "2022-04-21 16:59:27",
+        "id": 2
+    },
+    "message": "Book added successfully!!!"
+}
+
+
+// ==============================================================================================================
+// endpoint
+// api/books/1 (GET)
+// samole response
+{
+    "success": true,
+    "book_detail": {
+        "id": 1,
+        "book_name": "test1",
+        "author": "auth1",
+        "cover_image": "path/123",
+        "created_at": "2022-04-21 16:59:13",
+        "updated_at": "2022-04-21 16:59:13",
+        "deleted_at": null
+    }
+}
+
+// ==============================================================================================
+// ednpoint
+// api/books/1 (DELETE)
+// sample response
+{
+    "success": true,
+    "message": "Book has been deleted successfully"
+}
+
+// ==============================================================================================
+// endpoint
+// /api/books/1 (PATCH)
+{
+    "book_name": "test1234updated",
+    "author": "auth1",
+    "cover_image": "path/123",
+    "token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY1MDU1MTQ0NywiZXhwIjoxNjUwNTU1MDQ3LCJuYmYiOjE2NTA1NTE0NDcsImp0aSI6InBaT3hPZFdKNGVlVUwwUFEiLCJzdWIiOjQsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.QQC111gzycnT9AGIZGOeNRfJaeLKm32O6dLG2Vn0PZU"
+}
+// sample response
+{
+    "success": true,
+    "message": "Book updated successfully."
+}
+
+// =================================================================================================
+
