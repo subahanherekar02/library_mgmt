@@ -1,0 +1,101 @@
+
+
+// first register endpoint
+// enpoint : {api/register'}
+// method : post
+{
+  "firstname": "fname",
+  "lastname": "lname",
+  "mobile": "1234567891",
+  "email": "user12@gmail.com",
+  "password": "123456789",
+  "password_confirmation": "123456789",
+  "age": "10",
+  "gender": "m",
+  "city": "mumbai"
+}
+// o/p response
+{"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY1MDU0NzI3OSwiZXhwIjoxNjUwNTUwODc5LCJuYmYiOjE2NTA1NDcyNzksImp0aSI6Ilg5NVAyOTQ3d25RYklLNkciLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.X_6u8CdtP0qObUrDkxgaj5ZsoqLPrQ5fzhLH7pk3Wss","token_type":"bearer","expires_in":3600}
+
+// =====================================================================================================
+// login endpoint
+// api/auth/login
+payload:{
+  	"email":"user12@gmail.com",
+  	"password":"123456789"
+}
+// sample-response
+{"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY1MDU0NzQ1NSwiZXhwIjoxNjUwNTUxMDU1LCJuYmYiOjE2NTA1NDc0NTUsImp0aSI6InFaR2hjeEtyNEFoQ2twVlEiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.xr0BDB7bOMjeIb9EI69oV-BiU8-ojTYMSnZwig_5geM","token_type":"bearer","expires_in":3600}
+
+//==========================================================================================================
+// profile api
+// endpoint api/auth/profile
+{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY1MDU1MTQ0NywiZXhwIjoxNjUwNTU1MDQ3LCJuYmYiOjE2NTA1NTE0NDcsImp0aSI6InBaT3hPZFdKNGVlVUwwUFEiLCJzdWIiOjQsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.QQC111gzycnT9AGIZGOeNRfJaeLKm32O6dLG2Vn0PZU"}
+
+// sample response
+{
+    "sucess": true,
+    "user_details": {
+        "id": 4,
+        "firstname": "fname",
+        "lastname": "lname",
+        "mobile": 1234567893,
+        "email": "user12345@gmail.com",
+        "age": 10,
+        "gender": "m",
+        "city": "mumbai",
+        "created_at": "2022-04-21 14:30:47",
+        "updated_at": "2022-04-21 14:30:47",
+        "deleted_at": null
+    }
+}
+
+// ===================================================================================================================
+
+// destroy api
+// endpoint
+// api/auth/destroy/1
+payload:{
+	"token":""
+}
+// sample response
+{
+    "success": true,
+    "message": "User has been deleted successfully"
+}
+
+// ========================================================================================================================
+// endpoint
+// api/auth/users
+// sample response
+{
+    "success": true,
+    "users": [
+        {
+            "id": 1,
+            "firstname": "fname",
+            "lastname": "lname",
+            "mobile": 1234567890,
+            "email": "user1@gmail.com",
+            "age": 10,
+            "gender": "m",
+            "city": "mumbai",
+            "created_at": "2022-04-21 13:19:48",
+            "updated_at": "2022-04-21 13:19:48",
+            "deleted_at": null
+        },
+        {
+            "id": 4,
+            "firstname": "fname",
+            "lastname": "lname",
+            "mobile": 1234567893,
+            "email": "user12345@gmail.com",
+            "age": 10,
+            "gender": "m",
+            "city": "mumbai",
+            "created_at": "2022-04-21 14:30:47",
+            "updated_at": "2022-04-21 14:30:47",
+            "deleted_at": null
+        }
+    ]
+}
