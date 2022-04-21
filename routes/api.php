@@ -39,4 +39,7 @@ Route::group([
 	'middleware'=>'api',
 ], function($router){
 	 Route::resource('books','BookController');
+	 Route::post('rent-a-book','BookController@rentABook')->name('rent-a-book');
+	 Route::post('return-a-book/{books_id}','BookController@returnABook')->name('return-a-book');
+	 Route::get('rented-books-data/{users_id}','BookController@rentedBooksData');
 });

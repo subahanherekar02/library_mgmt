@@ -55,9 +55,6 @@ payload:{
 // destroy api
 // endpoint
 // api/auth/destroy/1
-payload:{
-	"token":""
-}
 // sample response
 {
     "success": true,
@@ -207,4 +204,41 @@ payload:{
 }
 
 // =================================================================================================
+// endpoint 
+// api/rent-a-book (POSt)
+// payload 
+{
+  "users_id": "4",
+  "books_id": "2",
+  "books_issued_date": "2020-05-01 10:10:10",
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY1MDU2MjgxMSwiZXhwIjoxNjUwNTY2NDExLCJuYmYiOjE2NTA1NjI4MTEsImp0aSI6IjFSRjh0SHdkVVV1dzBNZnEiLCJzdWIiOjYsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qvXZuaEJta1DN2YkS2TDmh3xGBBHsLJyl_Ijs9HUHsE"
+}
+// sample response
+{"book_data":
+	{"users_id":"4",
+	"books_id":"2",
+	"books_issued_date":"2020-05-01 10:10:10",
+	"updated_at":"2022-04-21 17:41:48",
+	"created_at":"2022-04-21 17:41:48",
+	"id":2
+},
+"message":"Book issued to user successfully!!!!!!."}
 
+// =========================================================================================================
+// endpoint
+// api/return-a-book/2 (POST)
+// body
+{
+  "books_returned_date": "2020-05-01 10:10:10",
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTY1MDU2MjgxMSwiZXhwIjoxNjUwNTY2NDExLCJuYmYiOjE2NTA1NjI4MTEsImp0aSI6IjFSRjh0SHdkVVV1dzBNZnEiLCJzdWIiOjYsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qvXZuaEJta1DN2YkS2TDmh3xGBBHsLJyl_Ijs9HUHsE"
+}
+// sample -response
+{"suceess":true,"message":"Book returned successfully!!!","data":{"id":2,"users_id":4,"books_id":2,"books_issued_date":"2020-05-01 10:10:10","books_returned_date":"2020-05-01 10:10:10","created_at":"2022-04-21 17:41:48","updated_at":"2022-04-21 17:53:41","deleted_at":null}}
+
+//======================================================================================================================
+
+
+// endpoint
+// api/rented-books-data/2 (GET)
+// Sample response
+{"status":"success","data":[{"id":2,"firstname":"fname","lastname":"lname","email":"user12345@gmail.com","book_name":"test1234updated","author":"auth1","books_issued_date":"2020-05-01 10:10:10","books_returned_date":"2020-05-01 10:10:10"}]}
